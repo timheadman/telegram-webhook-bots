@@ -9,6 +9,7 @@ build:
 copy:
 	@scp $(NAME).tar.bz2 tim@10.11.12.252:/home/tim/ 
 	@ssh server "docker load < /home/tim/$(NAME).tar.bz2 && rm -f /home/tim/$(NAME).tar.bz2" 
+	@rm -f $(NAME).tar.bz2
 
 .PHONY: run
 run:
