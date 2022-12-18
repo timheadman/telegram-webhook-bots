@@ -1,8 +1,15 @@
-.*/
 *.log
+*.gzip
+*.tar
+*.bz2
 config.*
 *test*
 venv*
+*.gzip
+*.tar
+*.bz2
+.*/
 backup/
 image/
 icon/
+
