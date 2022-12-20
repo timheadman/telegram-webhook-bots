@@ -1,5 +1,5 @@
-NAME = telegram_webhook_bots
-RUNNER_NAME = run_$(NAME)_container.sh
+NAME = telegram-webhook-bots
+RUNNER_NAME = run-$(NAME)-container.sh
 
 .PHONY: build
 build:
