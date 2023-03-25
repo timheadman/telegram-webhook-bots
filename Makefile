@@ -1,6 +1,5 @@
 NAME = telegram-webhook-bots
 EXEC = docker run --restart=on-failure --detach --publish 8081:80 --name $(NAME) $(NAME)
-RUN_SCRIPT_NAME = run-$(NAME)-container.sh
 SERVER = tim@10.11.12.252
 
 .PHONY: clean
