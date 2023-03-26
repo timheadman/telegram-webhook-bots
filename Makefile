@@ -1,12 +1,12 @@
 NAME = telegram-webhook-bots
-EXEC = docker run --restart=on-failure --detach --publish 8081:80 --name $(NAME) $(NAME)
+EXEC = docker run --restart=always --detach --publish 8081:80 --name $(NAME) $(NAME)
 SERVER = tim@10.11.12.252
 
 .PHONY: clean
 #Останавливаем контейнер и удаляем образ.
 clean:
-	docker container stop $(NAME)
-	docker container remove $(NAME)
+	docker container stop $(NAME); \
+	docker container remove $(NAME); \
 	docker image remove $(NAME)
 
 .PHONY: build
