@@ -12,9 +12,8 @@ clean:
 .PHONY: build
 #Создаем образ, создаем файл со скриптом.
 build:
-	docker build -t $(NAME) .
-	#Добавить: --memory=?????MB
-	@ls -l --color=auto *$(NAME)*
+	@docker build -t $(NAME) .
+	@docker image list $(NAME)
 
 .PHONY: copy
 #Удаленный запуск на сервер, сохраняем образ, отправляем все на сервер, запускаем удаленно.
