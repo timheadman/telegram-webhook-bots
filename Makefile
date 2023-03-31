@@ -1,4 +1,4 @@
-NAME = telegram-apache
+NAME = telegram_apache
 EXEC = docker run --restart=always --detach --publish 8081:80 --name $(NAME) $(NAME)
 SERVER = tim@10.11.12.252
 
